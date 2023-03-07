@@ -1,0 +1,10 @@
+# you need : REST Client => https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+# to make this file works
+# launch : npx ts-node-dev src/main.ts   
+###
+
+Get http://localhost:3000/app/hi
+
+###
+GET http://localhost:3000/app/bye
+
