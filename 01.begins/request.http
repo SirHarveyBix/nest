@@ -6,7 +6,7 @@
 Get http://localhost:3000/messages
 
 ### Get one message
-GET http://localhost:3000/messages/81
+GET http://localhost:3000/messages/810
 
 ### Create a new message
 POST http://localhost:3000/messages
