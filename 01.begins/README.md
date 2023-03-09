@@ -12,13 +12,15 @@ une app Nest a au moins un controller, et un module (les modules servent a "grou
 valide les données contenue dans la requete
 
 ### Controller
-"Route" la requete vers une fonction particuliere
+route de la requete vers une fonction
 
 ### Service
-execute la logique metier
+c'est une class qui execute la logique metier.
+utilise des repositories pour recuperer, stocker des données.
 
 ### Repository
-accède a la base de donnée
+c'est une class qui accède a la base de donnée.
+c'est souvent "TypeORM entity" (schema)
 
 ### nest cli
 - `npm i -g @nestjs/cli`

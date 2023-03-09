@@ -6,12 +6,12 @@
 Get http://localhost:3000/messages
 
 ### Get one message
-GET http://localhost:3000/messages/12
+GET http://localhost:3000/messages/81
 
 ### Create a new message
 POST http://localhost:3000/messages
 content-type: application/json
 
 {
-  "content" : "Hello There!"
+  "content" : "ALLone!"
 }
