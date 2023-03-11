@@ -34,3 +34,56 @@ creer des ficher nest via le terminal:
 - module: `nest generate module messages`
 - controller: `nest generate controller messages`
   - `nest generate controller messages/messages --flat`
+
+---
+
+## Dpendency injection
+
+### Bad Practice
+
+MessagesService créé sa propre copie de Message repository :
+
+```js
+export class MessagesService {
+  messagesRepo: MessagesRepository
+
+  constructor(){
+    this.messagesRepo = new MessagesRepository()
+  }
+}
+```
+
+### Better Practice
+
+MessagesService reçois ses dependences :
+
+```js
+export class MessagesService {
+  messagesRepo: MessagesRepository
+
+  constructor(repo: MessagesRepository ){
+    this.messagesRepo = repo
+  }
+}
+```
+
+### Best Practice
+
+MessagesService reçois ses dependence, et n'a pas besoin de MessagesRepository
+
+```js
+
+interface Repository {
+  findOne(id: string)
+  findAll()
+  create(content: string)
+}
+
+export class MessagesService {
+  messagesRepo: Repository
+
+  constructor(repo: Repository ){
+    this.messagesRepo = repo
+  }
+}
+```

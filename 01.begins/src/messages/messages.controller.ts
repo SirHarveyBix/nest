@@ -9,7 +9,7 @@ import {
 import { CreateMessageDto } from './dtos/create-message.dto';
 import { MessagesService } from './messages.service';
 
-@Controller('/messages')
+@Controller('messages')
 export class MessagesController {
   constructor(public messageService: MessagesService) {}
 
