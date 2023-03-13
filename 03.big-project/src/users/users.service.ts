@@ -13,5 +13,6 @@ export class UsersService {
     const user = this.repo.create({ email, password });
 
     this.repo.save(user);
+    // this.repo.save({ email, password }); => does not execute Hook (like: @AfterInsert())
   }
 }
