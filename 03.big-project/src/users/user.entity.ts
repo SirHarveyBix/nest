@@ -11,14 +11,17 @@ import {
 export class UserEntity {
   @PrimaryGeneratedColumn()
   id: number;
+
   @Column()
   email: string;
+
   @Column()
+  // @Exclude()
   password: string;
 
   @AfterInsert()
   logInsert() {
-    console.info('Interted User id: ', this.id);
+    console.info('Inserted User id: ', this.id);
   }
   @AfterUpdate()
   logUpdate() {
