@@ -21,7 +21,7 @@ export class UserEntity {
 
   @AfterInsert()
   logInsert() {
-    console.info('Interted User id: ', this.id);
+    console.info('Inserted User id: ', this.id);
   }
   @AfterUpdate()
   logUpdate() {
