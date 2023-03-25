@@ -1,40 +1,47 @@
 # you need : REST Client => https://marketplace.visualstudio.com/items?itemName=humao.rest-client
 # to make this file works
 ###
+// Variables :
+@authHost = http://localhost:3000/auth
+@user_email = ic@test.com
+@user_password = test
 
-
+// Routes :
 ### Create new user
-POST http://localhost:3000/auth/signup 
+POST {{ authHost }}/signup 
 Content-Type: application/json
 
 {
-  "email": "vi@test.com",
-  "password": "test" 
+  "email": "{{ user_email }}",
+  "password": "{{ user_password }}"
 }
 
 ### Conect user
-POST http://localhost:3000/auth/signin 
+POST {{ authHost }}/signin 
 Content-Type: application/json
 
 {
-  "email": "v@test.com",
-  "password": "t^est" 
+  "email": "{{ user_email }}",
+  "password": "{{ user_password }}"
 }
 
+### Get current user
+GET {{ authHost }}/whoami
+
 ### Get specific user by id
-GET http://localhost:3000/auth/2
+GET {{ authHost }}/2
 
 ### Get specific user by email
-GET http://localhost:3000/auth?email=v@test.com
+GET {{ authHost }}?email=v@test.com
 
 ### Delete specific user
-DELETE  http://localhost:3000/auth/2
+DELETE {{ authHost }}/2
 
 ### Update specific user
-PATCH  http://localhost:3000/auth/5
+PATCH {{ authHost }}/5
 Content-Type: application/json
 
 {
-  "email": "xxx@test.com",
-  "password": "blou" 
+  "email": "{{ user_email }}",
+  "password": "{{ user_password }}"
 }

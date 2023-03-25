@@ -12,7 +12,7 @@ export class UsersService {
   create(email: string, password: string) {
     const user = this.repo.create({ email, password });
 
-    this.repo.save(user);
+    return this.repo.save(user);
     // this.repo.save({ email, password }); => does not execute Hook (like: @AfterInsert())
     // it needs to recieve a plain object
   }

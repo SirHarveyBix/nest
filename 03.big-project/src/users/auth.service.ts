@@ -33,7 +33,7 @@ export class AuthService {
     const hash = (await scrypt(password, salt, 32)) as Buffer;
     const result = salt + '.' + hash.toString('hex');
 
-    const userToSave = this.usersService.create(email, result);
+    const userToSave = await this.usersService.create(email, result);
     return userToSave;
   }
 
