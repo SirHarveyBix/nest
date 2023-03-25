@@ -3,7 +3,7 @@
 ###
 // Variables :
 @authHost = http://localhost:3000/auth
-@user_email = ic@test.com
+@user_email = ihc@test.com
 @user_password = test
 
 // Routes :
@@ -16,7 +16,7 @@ Content-Type: application/json
   "password": "{{ user_password }}"
 }
 
-### Conect user
+### Connect user
 POST {{ authHost }}/signin 
 Content-Type: application/json
 
@@ -27,6 +27,9 @@ Content-Type: application/json
 
 ### Get current user
 GET {{ authHost }}/whoami
+
+### signout current user
+POST {{ authHost }}/signout
 
 ### Get specific user by id
 GET {{ authHost }}/2
