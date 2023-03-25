@@ -38,5 +38,3 @@ Content-Type: application/json
   "email": "xxx@test.com",
   "password": "blou" 
 }
-
-###

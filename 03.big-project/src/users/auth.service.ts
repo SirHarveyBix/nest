@@ -14,7 +14,7 @@ type Scrypt = (
   arg3: number,
 ) => Promise<unknown>;
 
-// tranforme scrypt pour retourner une promesse plutot qu'une fonctoin asynchrone
+// tranforme scrypt pour retourner une promesse plutot qu'une fonction asynchrone
 const scrypt: Scrypt = promisify(_scrypt);
 
 @Injectable()

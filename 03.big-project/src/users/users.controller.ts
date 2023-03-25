@@ -8,6 +8,7 @@ import {
   Patch,
   Post,
   Query,
+  Session,
 } from '@nestjs/common';
 import { CreateUserDto } from './dtos/create-user.dto';
 import { UsersService } from './users.service';
@@ -34,7 +35,7 @@ export class UsersController {
     return this.authService.signin(body.email, body.password);
   }
 
-  // @UseInterceptors(new SerializeInterceptor(UserDto))
+  // @UseInterceptors(new SerializeInterceptor(UserDto)) => replaced by @Serialize(UserDto)
   @Get('/:id')
   async findUser(@Param('id') id: string) {
     const user = await this.userService.findOne(Number(id));
