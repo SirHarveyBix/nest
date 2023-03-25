@@ -8,18 +8,18 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "t@test.com",
+  "email": "x@test.com",
   "password": "test" 
 }
 
 ### Get specific user by id
-GET http://localhost:3000/auth/7
+GET http://localhost:3000/auth/2
 
 ### Get specific user by email
-GET http://localhost:3000/auth?email=xxxxx@test.com
+GET http://localhost:3000/auth?email=x@test.com
 
 ### Delete specific user
-DELETE  http://localhost:3000/auth/8
+DELETE  http://localhost:3000/auth/2
 
 ### Update specific user
 PATCH  http://localhost:3000/auth/5
