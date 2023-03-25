@@ -8,15 +8,24 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "x@test.com",
+  "email": "vi@test.com",
   "password": "test" 
+}
+
+### Conect user
+POST http://localhost:3000/auth/signin 
+Content-Type: application/json
+
+{
+  "email": "v@test.com",
+  "password": "t^est" 
 }
 
 ### Get specific user by id
 GET http://localhost:3000/auth/2
 
 ### Get specific user by email
-GET http://localhost:3000/auth?email=x@test.com
+GET http://localhost:3000/auth?email=v@test.com
 
 ### Delete specific user
 DELETE  http://localhost:3000/auth/2
