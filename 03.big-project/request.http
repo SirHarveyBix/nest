@@ -3,7 +3,7 @@
 ###
 // Variables :
 @authHost = http://localhost:3000/auth
-@user_email = ihc@test.com
+@user_email = abc@test.com
 @user_password = test
 
 // Routes :
@@ -36,6 +36,8 @@ GET {{ authHost }}/2
 
 ### Get specific user by email
 GET {{ authHost }}?email=v@test.com
+### Get all users
+GET {{ authHost }}
 
 ### Delete specific user
 DELETE {{ authHost }}/2
