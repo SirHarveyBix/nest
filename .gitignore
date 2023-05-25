@@ -4,3 +4,7 @@
 .pnp.js
 **/dist
 **/*.sqlite
+
+**.env.test
+**.env.development
+**.env.production
