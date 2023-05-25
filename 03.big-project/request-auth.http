@@ -3,7 +3,7 @@
 ###
 // Variables :
 @authHost = http://localhost:3000/auth
-@user_email = abc@test.com
+@user_email = admin@admin.com
 @user_password = test
 
 // Routes :
