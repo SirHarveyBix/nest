@@ -17,7 +17,7 @@ Content-Type: application/json
   "mileage": 100000,
   "lng": 0,
   "lat": 0,
-  "price": 5000
+  "price": 1300
 }
 
 ### Approve a report :
@@ -25,5 +25,19 @@ PATCH {{ authHost }}/9
 Content-Type: application/json
 
 {
-  "approved": false
+  "approved": true
 }
+
+### Get an estimate for a vehicule :
+GET {{ authHost }}
+?make=Ford
+&model=Corolla
+&lng=0
+&lat=0
+&mileage=100000
+&year=1980
+
+
+
+
+
